@@ -1,0 +1,21 @@
+main.contenedor {
+  overflow-x: scroll;
+}
+nav.contenedor {
+  display: flex;
+  align-content: center;
+}
+div.carrucel {
+  white-space: nowrap;
+}
+main.contenedor div.carrucel div{
+  background: green;
+  display: inline-flex;
+  align-items: center; /*y*/
+  justify-content: center; /*x*/
+  width: 100%;
+  height: 50px;
+}
+nav.contenedor button{
+  flex: auto;
+}
