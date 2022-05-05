@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import '../App.css';
 
 function Carrucel() {
-  const contenedor = useRef(null);
-
+  const ref = useRef(null);
   const [tam, setTam] = useState({x: 0,y: 0})
   const [x,setX] = useState(1);
   const [y,setY] = useState(1);
