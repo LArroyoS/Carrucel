@@ -19,10 +19,11 @@ function Carrucel() {
     }
   },[window]);
   //mover
+  /*
   useEffect(() => {
     ref.current.children.carrucel;
   },[x,y]);
-
+  */
   const redimension = () => {
     setTam({
       x: ref.current.clientWidth,
