@@ -20,7 +20,7 @@ function Carrucel() {
   },[window]);
   //mover
   useEffect(() => {
-    ref.current.children[0].current.scrollTo((x*tam.x),(y*tam.y))
+    ref.current.children.carrucel.scrollTo((x*tam.x),(y*tam.y));
   },[x,y]);
 
   const redimension = () => {
@@ -40,7 +40,7 @@ function Carrucel() {
     <div>
       <main className="contenedor"
         ref={ref}>
-        <div className="carrucel">
+        <div name="carrucel" className="carrucel">
           <div>Item 1</div>
           <div>Item 2</div>
           <div>Item 3</div>
