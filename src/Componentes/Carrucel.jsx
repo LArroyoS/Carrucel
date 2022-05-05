@@ -20,7 +20,7 @@ function Carrucel() {
   //mover
   useEffect(() => {
     ref.current.scrollTo((x),(y));
-  },[x,y]);
+  },[x]);
   
   const redimension = () => {
     setTam({
