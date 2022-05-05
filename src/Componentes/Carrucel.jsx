@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import '../App.css';
 
 function Carrucel() {
-  const ref = useRef(null);
+  const contenedor = useRef(null);
+
   const [tam, setTam] = useState({x: 0,y: 0})
   const [x,setX] = useState(1);
   const [y,setY] = useState(1);
@@ -16,8 +17,12 @@ function Carrucel() {
     return () => {
       window.removeEventListener("resize",redimension);
     }
-  },[window])
-  
+  },[window]);
+  //mover
+  useEffect(() => {
+    ref.current.children[0].current.scrollTo((x*tam.x),(y*tam.y))
+  },[x,y]);
+
   const redimension = () => {
     setTam({
       x: ref.current.clientWidth,
