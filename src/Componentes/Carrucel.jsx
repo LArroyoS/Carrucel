@@ -20,7 +20,7 @@ function Carrucel() {
   },[window]);
   //mover
   useEffect(() => {
-    ref.current.children.carrucel.scrollTo((x*tam.x),(y*tam.y));
+    ref.current.children.carrucel;
   },[x,y]);
 
   const redimension = () => {
