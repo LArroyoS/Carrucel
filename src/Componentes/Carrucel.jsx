@@ -7,6 +7,23 @@ function Carrucel() {
   const [x,setX] = useState(1);
   const [y,setY] = useState(1);
 
+  //Redimensionar
+  useEffect(() => {
+    redimension();
+  },[]);
+  useEffect(() => {
+    window.addEventListener("resize",redimension);
+    return () => {
+      window.removeEventListener("resize",redimension);
+    }
+  },[window])
+  
+  const redimension = () => {
+    setTam({
+      x: ref.current.clientWidth,
+      y: ref.current.clientHeight
+    });
+  }
   const anterior = () => {
     setX(x-1);
   }
